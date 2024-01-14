@@ -1,0 +1,49 @@
+@layer components {
+  .section {
+    @apply relative;
+  }
+  .bg-gradient {
+    @apply bg-gradient-to-r from-[#F5F0FF] via-[#EFF6FE] to-[#EDFAF5];
+  }
+
+  .bg-grey {
+    @apply bg-grey-100;
+  }
+
+  .container {
+    @apply max-w-[1170px];
+  }
+  .t-transition {
+    @apply transition-all	duration-300 ease-in-out;
+  }
+  .btn {
+    @apply border
+    text-base
+    leading-[1.012]
+    font-semibold
+    inline-flex 
+    py-[15px] px-8
+    rounded-[100px]
+    transition-all
+    duration-300
+    ease-in-out;
+    &.btn-sm {
+      @apply text-sm leading-[1.012] py-3 px-5;
+    }
+    &.btn-secondary {
+      @apply bg-green border-green text-white;
+      &:is(:hover, :focus, :active) {
+        @apply bg-primary-900 border-primary;
+      }
+    }
+    &.btn-primary {
+      @apply bg-primary-900 border-primary text-white;
+      &:is(:hover, :focus, :active) {
+        @apply bg-green border-green;
+      }
+    }
+    &.btn-outline-white {
+      @apply border-grey-600 bg-white;
+    }
+  }
+}
